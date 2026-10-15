@@ -183,7 +183,7 @@ LogFrame::LogFrame(LogWindowParams params)
 
     if (params_.loader) AttachLoader();
     if (CommitCount() > 0) commits_->SelectOnly(0);
-    commits_->SetFocus();
+    SetInitialFocus(commits_);
 }
 
 LogFrame::~LogFrame() {

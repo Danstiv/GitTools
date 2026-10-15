@@ -129,7 +129,7 @@ DiffFrame::DiffFrame(wxWindow* owner, const DiffWindowParams& params)
         event.Skip();
         CallAfter([this] { CheckCaretLineAndPlay(); });
     });
-    edit_->SetFocus();
+    SetInitialFocus(edit_);
 }
 
 DiffFrame::~DiffFrame() {
